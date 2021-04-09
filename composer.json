@@ -1,0 +1,29 @@
+{
+    "name": "karonte691/datasmoke",
+    "description": "A simple library for generating random values",
+    "keywords": ["random", "data", "seed"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luca Magistrelli",
+            "email": "blackstorm010@gmail.com"
+        }
+    ],
+    "type": "project",
+    "require": {
+		"php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "DataSmoke\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DataSmoke\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7"
+    }
+}
