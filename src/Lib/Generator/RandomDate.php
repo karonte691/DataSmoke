@@ -11,13 +11,15 @@ namespace DataSmoke\Lib\Generator;
 final class RandomDate
 {
     /**
+     * Generate random date between now and + 1 days
+     *
      * @return \DateTime
      * @throws \Exception
      */
-    public function value() : \DateTime
+    public function value(): \DateTime
     {
         $firsTime = strtotime(date('Y-m-d'));
-        $secondTime = $firsTime+86400;
+        $secondTime = $firsTime + 86400;
 
         $randtime = rand($firsTime, $secondTime);
         $randdate = date('Y-m-d g:i:s A', $randtime);

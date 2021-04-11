@@ -17,12 +17,12 @@ final class DataSmokeTest extends TestCase
         //all the classes are already tested, here we just check if all method are ok
         DataSmoke::inizialize();
 
-        $number = DataSmoke::Number()->int();
-        $float = DataSmoke::Number()->float();
-        $bool = DataSmoke::Bool()->value();
-        $string = DataSmoke::String()->simple();
-        $hash = DataSmoke::String()->hash();
-        $date = DataSmoke::Date()->value();
+        $number = DataSmoke::number()->int();
+        $float = DataSmoke::number()->float();
+        $bool = DataSmoke::bool()->value();
+        $string = DataSmoke::string()->simple();
+        $hash = DataSmoke::string()->hash();
+        $date = DataSmoke::date()->value();
 
         $this->assertIsInt($number);
         $this->assertIsFloat($float);

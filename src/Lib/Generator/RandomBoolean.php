@@ -10,10 +10,12 @@ namespace DataSmoke\Lib\Generator;
 final class RandomBoolean
 {
     /**
+     * Generate random bool(true/false)
+     *
      * @return bool
      * @throws \Exception
      */
-    public function value() : bool
+    public function value(): bool
     {
         return (bool)\random_int(0, 1);
     }

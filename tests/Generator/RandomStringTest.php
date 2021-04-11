@@ -69,7 +69,39 @@ final class RandomStringTest extends TestCase
 
         $this->assertNotNull($string);
         $this->assertTrue(preg_match("/^([a-f0-9]{64})$/", $string) == 1);
+    }
 
+    /**
+     * @test
+     */
+    public function itWillGenerateAValidUuuidV4RandomString() : void
+    {
+        $validUuuidV4 = '/^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i';
 
+        $generator = new RandomString();
+
+        $string = $generator->uuidv4();
+
+        $this->assertNotNull($string);
+
+        $this->assertTrue(preg_match($validUuuidV4, $string) == 1);
+    }
+
+    /**
+     * @test
+     */
+    public function itWillGenerateARandomChar() : void
+    {
+        $generator = new RandomString();
+
+        $char = $generator->char();
+
+        $this->assertNotNull($char);
+        $this->assertIsString($char);
+        $this->assertEquals(1, strlen($char));
+
+        $newChar = $generator->char();
+
+        $this->assertNotEquals($char, $newChar);
     }
 }
