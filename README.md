@@ -4,6 +4,24 @@ DataSmoke is a PHP lightweight library for generating random string/bool/number/
 functions without use any external libraries, in order to keep this lib as pure php implementation
 
 
+Install
+-----
+
+Using composer.json: 
+```
+{
+    "require": {
+        "karonte691/DataSmoke": "~0.1"
+    }
+}
+```
+
+or execute the command: 
+
+```
+composer require karonte691/DataSmoke:0.1
+```
+
 ## Usage
 
 ## number
